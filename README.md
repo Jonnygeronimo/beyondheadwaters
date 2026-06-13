@@ -1,13 +1,13 @@
-# Drift & Rise
+# Beyond Headwaters
 
 Eine atmosphärische, responsive Landingpage für ein unabhängiges
 Flyfishing-Kollektiv aus dem Alpenraum.
 
-![Drift & Rise Hero](assets/river-hero.png)
+![Beyond Headwaters Hero](assets/river-hero.png)
 
 ## Über das Projekt
 
-**Drift & Rise** verbindet Menschen, die im Fliegenfischen mehr sehen als den
+**Beyond Headwaters** verbindet Menschen, die im Fliegenfischen mehr sehen als den
 Fang. Die Website erzählt von gemeinsamen Tagen am Wasser, alpinen Flüssen und
 dem Austausch innerhalb des Kollektivs.
 
