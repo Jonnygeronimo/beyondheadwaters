@@ -3,6 +3,7 @@
 Eine atmosphärische, responsive Landingpage für ein unabhängiges
 Flyfishing-Kollektiv aus dem Alpenraum.
 
+![Drift & Rise Hero](assets/river-hero.png)
 
 ## Über das Projekt
 
@@ -22,6 +23,7 @@ editorialen Typografie und einer zurückhaltenden, naturinspirierten Farbwelt.
 - Interaktive Gewässerauswahl
 - Mobile Navigation
 - Beitrittsformular mit direkter Rückmeldung
+- Separate Seiten für Impressum und Datenschutz
 - Berücksichtigung reduzierter Bewegungseinstellungen
 - Semantisches HTML und zugängliche Beschriftungen
 
@@ -53,6 +55,8 @@ Anschließend ist die Website unter
 .
 ├── assets/
 │   └── river-hero.png
+├── datenschutz.html
+├── impressum.html
 ├── index.html
 ├── script.js
 ├── styles.css
@@ -73,8 +77,13 @@ Das Beitrittsformular demonstriert aktuell nur die Interaktion im Frontend und
 sendet keine Daten an einen Server. Für den produktiven Einsatz muss es mit
 einem Formular- oder Newsletter-Dienst verbunden werden.
 
-Die Links zu Instagram, Impressum und Datenschutz sind Platzhalter und sollten
-vor der Veröffentlichung ersetzt werden.
+Der Instagram-Link ist noch ein Platzhalter und sollte vor der Veröffentlichung
+ersetzt werden.
+
+Im Impressum und in der Datenschutzerklärung sind fehlende Betreiber- und
+Hosting-Angaben deutlich als Platzhalter gekennzeichnet. Diese Angaben müssen
+vor der Veröffentlichung durch die tatsächlichen Informationen ersetzt und die
+Rechtstexte für den konkreten Einsatz geprüft werden.
 
 ## Lizenz
 
