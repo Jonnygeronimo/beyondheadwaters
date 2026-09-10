@@ -68,7 +68,7 @@ input {
   align-items: center;
   gap: 10px;
   width: max-content;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
   letter-spacing: 0.09em;
 }
@@ -92,6 +92,9 @@ input {
   display: flex;
   gap: 38px;
   font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .desktop-nav a {
@@ -205,8 +208,8 @@ input {
 }
 
 .hero h1 {
-  max-width: 950px;
-  font-size: clamp(76px, 10.5vw, 164px);
+  max-width: none;
+  font-size: clamp(55px, 6.4vw, 102px);
 }
 
 em {
@@ -321,6 +324,36 @@ em {
   line-height: 1.8;
 }
 
+.guiding-gallery {
+  display: grid;
+  grid-column: 2;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: clamp(180px, 20vw, 275px);
+  gap: 7px;
+  margin-top: 86px;
+}
+
+.guiding-gallery figure {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.guiding-gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.78) contrast(0.96);
+  transition: filter 0.3s ease, transform 0.5s ease;
+}
+
+.guiding-gallery figure:hover img {
+  filter: saturate(1) contrast(1);
+  transform: scale(1.025);
+}
+
 .text-link {
   padding-bottom: 7px;
   border-bottom: 1px solid currentColor;
@@ -351,11 +384,12 @@ em {
 }
 
 .waters-content {
-  align-self: center;
+  align-self: start;
+  padding-top: 10px;
 }
 
 .waters h2 {
-  font-size: clamp(72px, 9vw, 140px);
+  font-size: clamp(55px, 6.4vw, 102px);
 }
 
 .waters h2 em {
@@ -429,6 +463,10 @@ em {
 
 .notes-heading h2 {
   font-size: clamp(72px, 8.5vw, 132px);
+}
+
+.notes-heading {
+  padding-top: 10px;
 }
 
 .notes-heading h2 em {
@@ -606,32 +644,49 @@ blockquote {
   letter-spacing: 0.15em;
 }
 
-.input-row {
-  display: flex;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.48);
-}
-
-.input-row input {
+.join-form textarea {
+  box-sizing: border-box;
   width: 100%;
-  padding: 18px 0;
+  min-height: 112px;
+  margin: 0 0 28px;
+  padding: 14px 0;
+  resize: vertical;
   color: #fff;
   background: transparent;
   border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.48);
   outline: none;
   font-family: var(--serif);
-  font-size: 27px;
+  font-size: 23px;
+  line-height: 1.2;
 }
 
-.input-row input::placeholder {
+.join-form textarea::placeholder {
   color: rgba(255, 255, 255, 0.28);
 }
 
-.input-row button {
-  color: var(--lime);
-  background: none;
-  border: 0;
-  font-size: 22px;
+.submit-button {
+  padding: 13px 18px;
+  color: var(--ink);
+  background: var(--lime);
+  border: 1px solid var(--lime);
+  border-radius: 0;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.submit-button:hover {
+  color: var(--lime);
+  background: transparent;
+}
+
+.submit-button span {
+  margin-left: 12px;
 }
 
 .form-status {
@@ -1043,10 +1098,6 @@ footer div {
     padding: 120px 20px 30px;
   }
 
-  .hero h1 {
-    font-size: clamp(62px, 18vw, 108px);
-  }
-
   .legal-heading h1 {
     font-size: 67px;
   }
@@ -1071,6 +1122,19 @@ footer div {
   .manifesto-meta .text-link {
     display: inline-block;
     margin-top: 35px;
+  }
+
+  .guiding-gallery {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 10px;
+    margin-top: 60px;
+  }
+
+  .guiding-gallery img {
+    height: auto;
+    aspect-ratio: 4 / 3;
   }
 
   .waters {
@@ -1121,7 +1185,7 @@ footer div {
   }
 
   .hero h1 {
-    font-size: 67px;
+    font-size: 50px;
   }
 
   .travel-hero h1 {
@@ -1141,11 +1205,11 @@ footer div {
     font-size: 13px;
   }
 
-  .manifesto h2 {
+  .manifesto h2,
+  .waters h2 {
     font-size: 50px;
   }
 
-  .waters h2,
   .notes-heading h2 {
     font-size: 68px;
   }

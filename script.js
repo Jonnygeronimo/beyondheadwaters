@@ -19,7 +19,9 @@ menuToggle?.addEventListener("click", () => toggleMenu());
 mobileLinks.forEach((link) => link.addEventListener("click", () => toggleMenu(false)));
 
 rivers.forEach((river) => {
-  river.querySelector("button").addEventListener("click", () => {
+  const riverLink = river.querySelector("a, button");
+
+  riverLink?.addEventListener("click", () => {
     rivers.forEach((item) => item.classList.remove("active"));
     river.classList.add("active");
   });
@@ -27,14 +29,19 @@ rivers.forEach((river) => {
 
 form?.addEventListener("submit", (event) => {
   event.preventDefault();
-  const email = form.querySelector("input").value.trim();
+  const message = form.querySelector("#message").value.trim();
 
-  if (!email) return;
+  if (!message) return;
+
+  const subject = "Neue Nachricht über Beyond Headwaters";
+  const body = `Nachricht:\n${message}`;
+  const mailto = `mailto:cast@beyond-headwaters.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
   if (status) {
-    status.textContent = "Schön, dass du dabei bist. Wir melden uns vom Wasser.";
+    status.textContent = "Dein E-Mail-Programm öffnet sich mit deiner Nachricht.";
   }
   form.reset();
+  window.location.href = mailto;
 });
 
 const observer = new IntersectionObserver(
